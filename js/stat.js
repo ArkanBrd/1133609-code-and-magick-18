@@ -41,13 +41,10 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillText('Ура вы победили!', CLOUD_X + 100, TEXT_COORD_Y);
   ctx.fillText('Список результатов:', CLOUD_X + 100, TEXT_COORD_Y + TEXT_GAP_Y);
 
-
-  var name = ['Вы', 'Гуша', 'MKS', 'Курепа'];
-
   var maxTime = getMaxElement(times);
 
-  var getPlayerColor = function (names) {
-    if (names === 'Вы') {
+  var getPlayerColor = function (name) {
+    if (name === 'Вы') {
       return 'rgba(255, 0, 0, 1)';
     } else {
       return 'hsl(210, ' + (75 + 70 * Math.random()) + '%, 75%)';
