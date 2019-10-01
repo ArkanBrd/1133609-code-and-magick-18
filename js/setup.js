@@ -30,15 +30,14 @@ var randomWizardEyesColor = function (WIZARD_EYES_COLOR) {
   return WIZARD_EYES_COLOR[Math.floor(Math.random() * WIZARD_EYES_COLORS.length)];
 };
 
-var createWizard = function (wizards) {
-  var wizards = [];
+var createWizards = function () {
   for (var i = 0; i < 4; i++) {
-    name.wizard = randomWizardName() + randomWizardSurname();
-    coatColor.wizard = randomWizardCoatColor();
-    eyesColor.wizard = randomWizardEyesColor();
+    wizards.name = randomWizardName() + randomWizardSurname();
+    wizards.coatColor = randomWizardCoatColor();
+    wizards.eyesColor = randomWizardEyesColor();
   }
-  return wizards;
 };
+var wizards = [createWizards(), createWizards(), createWizards(), createWizards()];
 
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
