@@ -34,7 +34,7 @@ var createWizards = function () {
   var wizzards = [];
   for (var i = 0; i < 4; i++) {
     var wizzard = {};
-    wizzard.name = randomWizardName() + randomWizardSurname();
+    wizzard.name = randomWizardName() + ' ' + randomWizardSurname();
     wizzard.coatColor = randomWizardCoatColor();
     wizzard.eyesColor = randomWizardEyesColor();
     wizzards.push(wizzard);
